@@ -1,20 +1,14 @@
-const student = {
 
-  name:'Abdulaziz',
-  grade:90,
-  subjects:['math','english'],
-  introduce() {
-    console.log('hi my name is Abdulaziz');
+const system = {
+  users: {
+    admin: {
+      permissions: {
+        read: true,
+        write: false
+      }
+    }
   }
-}
-
-student.grade = 80;
-student.isGraduated = false;
-
-for(let looper in student){
-
-  console.log(looper,student[looper]);
-  
-}
-
+};
+system.users.admin.permissions.write = true;
+console.log(system.users.admin.permissions);
 
