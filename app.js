@@ -1,14 +1,38 @@
+const team = {
+   _players:[],
+   _games:[],
+   get players(){
+    return this._players;
+   },
+   get games(){
+    return this._games;
+   },
+   addPlayer(firstName,lastName,age){
+    const player = {
+      firstName,
+      lastName,
+      age
 
-const system = {
-  users: {
-    admin: {
-      permissions: {
-        read: true,
-        write: false
-      }
     }
-  }
-};
-system.users.admin.permissions.write = true;
-console.log(system.users.admin.permissions);
+    this._players.push(player)
+   },
+   addGame(opponent,teamPoints,opponentPoints){
+    const game = {
+      opponent,
+      teamPoints,
+      opponentPoints
+    }
+    this._games.push(game)
+
+   }
+   
+}
+team.addPlayer('ab','le',20);
+console.log(team._players);
+team.addGame('rival','10','5')
+console.log(team._games);
+
+
+
+
 
