@@ -31,6 +31,8 @@ team.addPlayer('ab','le',20);
 console.log(team._players);
 team.addGame('rival','10','5')
 console.log(team._games);
+console.log('final point');
+
 
 
 
