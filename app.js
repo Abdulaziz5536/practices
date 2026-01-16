@@ -1,17 +1,17 @@
-const scan = require('prompt-sync')();
-const sumArray = (arr = []) => {
-  let sum = 0;
-  while(true){
-  arr = scan('can you enter numbers: write stop to stop ');
-  if(arr === 'stop') break;
-  sum = sum + Number(arr);
+const students = [{name:'ab',grade:70},
+           {name:'ke',grade:50},
+    
+];
+
+       const average = () => {
   
-  }  
-  return sum;
+  let sum = 0,avg = 0;
+  for(let i=0;i<students.length;i++){
+    sum += students[i].grade;
+  }
+  avg = sum/students.length;
+  return avg;
 }
 
-console.log(sumArray());
 
-
-
-
+console.log(average());
