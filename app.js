@@ -1,39 +1,16 @@
-const team = {
-   _players:[],
-   _games:[],
-   get players(){
-    return this._players;
-   },
-   get games(){
-    return this._games;
-   },
-   addPlayer(firstName,lastName,age){
-    const player = {
-      firstName,
-      lastName,
-      age
-
-    }
-    this._players.push(player)
-   },
-   addGame(opponent,teamPoints,opponentPoints){
-    const game = {
-      opponent,
-      teamPoints,
-      opponentPoints
-    }
-    this._games.push(game)
-
-   }
-   
+const scan = require('prompt-sync')();
+const sumArray = (arr = []) => {
+  let sum = 0;
+  while(true){
+  arr = scan('can you enter numbers: write stop to stop ');
+  if(arr === 'stop') break;
+  sum = sum + Number(arr);
+  
+  }  
+  return sum;
 }
-team.addPlayer('ab','le',20);
-console.log(team._players);
-team.addGame('rival','10','5')
-console.log(team._games);
-console.log('final point');
 
-
+console.log(sumArray());
 
 
 
