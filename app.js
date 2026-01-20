@@ -1,41 +1,32 @@
-const username = (input) => {
-  return new Promise((resolve) => {
-    resolve(input);
-  });
+const validateCart = async (cart) => {
+  if (cart.length === 0) throw "Cart is empty";
+  return cart;
+};
 
-}
+const calculateTotal = async (cart) => {
+  return cart.reduce((sum, item) => sum + item.price, 0);
+};
 
-const password = (user,password) => {
-  return new Promise((resolve) => {
-    resolve(user,password);
-  })
-}
+const chargePayment = async (total) => {
+  if (total > 1000) throw "Payment failed";
+  return "Payment successful";
+};
 
-const session = (user) => {
-  return new Promise((resolve) => {
-    resolve(user);
-  })
-}
+const sendConfirmation = async () => {
+  console.log("Confirmation sent");
+};
 
-const getUser = async () => {
-  let user = await username("Abdulaziz");
-  console.log(user);
-}
-const checkPassword = async () => {
-  let pswCheck = await password(['Abdulaziz',1234]);
-  console.log(pswCheck);
-}
-const createSession = async () => {
-  let ss = await session('1');
-  console.log(ss);
-  
+const checkout = async () => {
+  try {
+    const cart = [{ price: 200 }, { price: 300 }];
+    await validateCart(cart);
+    const total = await calculateTotal(cart);
+    await chargePayment(total);
+    await sendConfirmation();
+    console.log("Order completed");
+  } catch (err) {
+    console.log(err);
+  }
+};
 
-}
-
-username();
-password();
-session();
-
-getUser();
-checkPassword();
-createSession();
+checkout();
