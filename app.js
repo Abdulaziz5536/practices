@@ -1,1 +1,2 @@
 
+const rand = true;
