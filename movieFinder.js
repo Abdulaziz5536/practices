@@ -1,4 +1,4 @@
-const tmdbKey = 'YOUR_API_KEY';
+const tmdbKey = 'https://jsonplaceholder.typicode.com';
 const tmdbBaseUrl = 'https://api.themoviedb.org/3';
 
 const genresDropdown = document.getElementById('genres');

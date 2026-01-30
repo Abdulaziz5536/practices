@@ -1,4 +1,4 @@
-// Returns sleep hours for each day
+
 function getSleepHours(day) {
   switch (day) {
     case 'monday':
@@ -20,7 +20,7 @@ function getSleepHours(day) {
   }
 }
 
-// Total actual sleep hours for the week
+
 function getActualSleepHours() {
   return getSleepHours('monday') +
          getSleepHours('tuesday') +
@@ -31,13 +31,13 @@ function getActualSleepHours() {
          getSleepHours('sunday');
 }
 
-// Ideal sleep hours for the week
+
 function getIdealSleepHours() {
   const idealHoursPerNight = 8;
   return idealHoursPerNight * 7;
 }
 
-// Compare actual vs ideal sleep
+
 function calculateSleepDebt() {
   const actualSleepHours = getActualSleepHours();
   const idealSleepHours = getIdealSleepHours();
@@ -55,5 +55,5 @@ function calculateSleepDebt() {
   }
 }
 
-// Run the program
+
 calculateSleepDebt();
