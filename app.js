@@ -1,2 +1,2 @@
 
-const rand = true;
+const rand = false;
