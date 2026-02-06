@@ -1,6 +1,23 @@
 
-const arr = [1,2,3,4,5];
+const ob =
+[
 
-const newArr = [...arr,'new'];
 
-console.log(newArr);
+
+    {
+    username:'asd',
+    grade:50
+  },
+
+   {
+    username:'sdf',
+    grade:90
+  }
+]
+
+
+
+
+
+console.log(ob[0].username);
+
