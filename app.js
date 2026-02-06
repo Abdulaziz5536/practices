@@ -19,5 +19,4 @@ const ob =
 
 
 
-console.log(ob[0].username);
 
