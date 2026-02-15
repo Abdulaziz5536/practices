@@ -9,10 +9,7 @@ const ob =
     grade:50
   },
 
-   {
-    username:'sdf',
-    grade:90
-  }
+   
 ]
 
 
